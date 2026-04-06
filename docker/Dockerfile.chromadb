@@ -1,0 +1,9 @@
+FROM chromadb/chroma:latest
+
+# Set persistence directory
+ENV CHROMA_DB_IMPL=duckdb+parquet
+ENV PERSIST_DIRECTORY=/chroma/chroma
+ENV ALLOW_RESET=true
+ENV ANONYMIZED_TELEMETRY=false
+
+EXPOSE 8000
